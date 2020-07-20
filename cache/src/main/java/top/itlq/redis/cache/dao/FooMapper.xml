@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.itlq.redis.cache.dao.FooMapper">
+    <resultMap id="resultMap" type="top.itlq.redis.cache.dao.Foo">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="amount" column="amount"/>
+        <result property="price" column="price"/>
+        <result property="createTime" column="createTime"/>
+        <result property="operTime" column="operTime"/>
+    </resultMap>
+    <select id="load" parameterType="java.lang.Long" resultMap="resultMap">
+        SELECT * FROM t_foo where id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,1 @@
+INSERT INTO t_foo(`name`, amount, price, createTime, operTime) values("name", RAND() * 20, RAND() * 1000, NOW(), NOW());
