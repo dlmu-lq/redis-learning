@@ -44,7 +44,7 @@ class RedisDaoTest {
         Assert.assertTrue(
                 redisDao.keys("a*")
                         .collectList().blockOptional()
-                        .orElseThrow()
+                        .orElseThrow(RuntimeException::new)
                         .containsAll(Arrays.asList(keys1))
         );
     }

@@ -37,17 +37,17 @@ public class OrderServiceTest {
         Long orderId1 = 1L,
                 orderId2 = 2L,
                 orderId3 = 3L;
-        redisCommands.hmset("order:" + orderId1, new HashMap<>(){{
+        redisCommands.hmset("order:" + orderId1, new HashMap<String, String>(){{
             put("orderId", orderId1.toString());
             put("money", "36.6");
             put("time", "2020-04-24");
         }});
-        redisCommands.hmset("order:" + orderId2, new HashMap<>(){{
+        redisCommands.hmset("order:" + orderId2, new HashMap<String, String>(){{
             put("orderId", orderId2.toString());
             put("money", "36.6");
             put("time", "2020-04-24");
         }});
-        redisCommands.hmset("order:" + orderId3, new HashMap<>(){{
+        redisCommands.hmset("order:" + orderId3, new HashMap<String, String>(){{
             put("orderId", orderId3.toString());
             put("money", "36.6");
             put("time", "2020-04-24");
@@ -69,7 +69,7 @@ public class OrderServiceTest {
     @Test
     void addOrder(){
         Long newOrderId = 4L;
-        redisCommands.hmset("order:" + newOrderId, new HashMap<>(){{
+        redisCommands.hmset("order:" + newOrderId, new HashMap<String, String>(){{
             put("orderId", newOrderId.toString());
             put("money", "36.6");
             put("time", "2020-04-24");
