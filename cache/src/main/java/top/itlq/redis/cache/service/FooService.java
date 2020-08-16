@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.ReactiveStringRedisTemplate;
 import org.springframework.data.redis.core.ReactiveValueOperations;
 import org.springframework.stereotype.Service;
-import top.itlq.redis.cache.configure.RedisKeyUtils;
+import top.itlq.redis.cache.config.RedisKeyUtils;
 import top.itlq.redis.cache.dao.Foo;
 import top.itlq.redis.cache.dao.FooMapper;
 
@@ -23,12 +23,12 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author liqiang
  */
 @Slf4j
-@Service
+//@Service
 public class FooService {
 
-    @Autowired
+    @Autowired(required = false)
     private FooMapper fooMapper;
-    @Autowired
+    @Autowired(required = false)
     private ObjectMapper objectMapper;
     @Autowired
     private StatefulRedisConnection<String, String> statefulRedisConnection;

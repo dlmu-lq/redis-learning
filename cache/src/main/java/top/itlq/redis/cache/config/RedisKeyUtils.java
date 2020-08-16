@@ -1,4 +1,4 @@
-package top.itlq.redis.cache.configure;
+package top.itlq.redis.cache.config;
 
 /**
  * 获得redis键的工具方法

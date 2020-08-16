@@ -1,4 +1,4 @@
-package top.itlq.redis.cache.configure;
+package top.itlq.redis.cache.config;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 @SpringBootTest
 @Slf4j
 class FooServiceTest {
-    @Autowired
+    @Autowired(required = false)
     FooService fooService;
 
     @Test
